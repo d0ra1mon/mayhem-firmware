@@ -7,13 +7,13 @@
 
 namespace ui
 {
-    class IMSI : public View                                // App class declaration
+    class IMSIView : public View                                // App class declaration
     {
     public:
         // Public declarations
         void focus() override; 
 
-        IMSI(NavigationView &nav);                          // App class init function declaration
+        IMSIView(NavigationView &nav);                          // App class init function declaration
         std::string title() const override { 
             return "IMSI"; 
         }; // App title
