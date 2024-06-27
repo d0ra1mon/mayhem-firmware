@@ -21,7 +21,6 @@
  * the Free Software Foundation, Inc., 51 Franklin Street,
  * Boston, MA 02110-1301, USA.
  */
-#include "ui_imsi.hpp"
 #include "ui_navigation.hpp"
 
 // #include "modules.h"
@@ -75,7 +74,7 @@
 // #include "ui_spectrum_painter.hpp" //moved to ext app
 #include "ui_ss_viewer.hpp"
 #include "ui_sstvtx.hpp"
-// #include "ui_test.hpp"
+#include "ui_test.hpp"
 #include "ui_text_editor.hpp"
 #include "ui_tone_search.hpp"
 #include "ui_touchtunes.hpp"
@@ -207,7 +206,6 @@ const NavigationView::AppList NavigationView::appList = {
     // Dangerous apps.
     {nullptr, "Flash Utility", UTILITIES, Color::red(), &bitmap_icon_temperature, new ViewFactory<FlashUtilityView>()},
     {nullptr, "Wipe SD card", UTILITIES, Color::red(), &bitmap_icon_tools_wipesd, new ViewFactory<WipeSDView>()},
-    {"imsi", "IMSI", RX, Color::red(), &bitmap_icon_remote, new ViewFactory<IMSIView>()},
     
 };
 
