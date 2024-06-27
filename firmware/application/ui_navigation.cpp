@@ -21,7 +21,7 @@
  * the Free Software Foundation, Inc., 51 Franklin Street,
  * Boston, MA 02110-1301, USA.
  */
-
+#include "ui_newapp.hpp"
 #include "ui_navigation.hpp"
 
 // #include "modules.h"
@@ -207,6 +207,8 @@ const NavigationView::AppList NavigationView::appList = {
     // Dangerous apps.
     {nullptr, "Flash Utility", UTILITIES, Color::red(), &bitmap_icon_temperature, new ViewFactory<FlashUtilityView>()},
     {nullptr, "Wipe SD card", UTILITIES, Color::red(), &bitmap_icon_tools_wipesd, new ViewFactory<WipeSDView>()},
+    {"newapp", "NewApp", TX, Color::red(), &bitmap_icon_remote, new ViewFactory<NewAppView>()},
+    
 };
 
 const NavigationView::AppMap NavigationView::appMap = generate_app_map(NavigationView::appList);
