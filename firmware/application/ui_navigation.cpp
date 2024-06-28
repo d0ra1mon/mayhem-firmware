@@ -21,6 +21,7 @@
  * the Free Software Foundation, Inc., 51 Franklin Street,
  * Boston, MA 02110-1301, USA.
  */
+#include "ui_imsi.hpp"
 #include "ui_navigation.hpp"
 
 // #include "modules.h"
@@ -74,7 +75,7 @@
 // #include "ui_spectrum_painter.hpp" //moved to ext app
 #include "ui_ss_viewer.hpp"
 #include "ui_sstvtx.hpp"
-#include "ui_test.hpp"
+// #include "ui_test.hpp"
 #include "ui_text_editor.hpp"
 #include "ui_tone_search.hpp"
 #include "ui_touchtunes.hpp"
@@ -200,13 +201,13 @@ const NavigationView::AppList NavigationView::appList = {
     {"iqtrim", "IQ Trim", UTILITIES, Color::orange(), &bitmap_icon_trim, new ViewFactory<IQTrimView>()},
     {nullptr, "SD Over USB", UTILITIES, Color::yellow(), &bitmap_icon_hackrf, new ViewFactory<SdOverUsbView>()},
     {"signalgen", "Signal Gen", UTILITIES, Color::green(), &bitmap_icon_cwgen, new ViewFactory<SigGenView>()},
-    {"testapp", "Test App", UTILITIES, Color::dark_grey(), nullptr, new ViewFactory<TestView>()},
+    //{"testapp", "Test App", UTILITIES, Color::dark_grey(), nullptr, new ViewFactory<TestView>()},
     //{"tonesearch", "Tone Search", UTILITIES, Color::dark_grey(), nullptr, new ViewFactory<ToneSearchView>()},
     {"wavview", "Wav View", UTILITIES, Color::yellow(), &bitmap_icon_soundboard, new ViewFactory<ViewWavView>()},
     // Dangerous apps.
     {nullptr, "Flash Utility", UTILITIES, Color::red(), &bitmap_icon_temperature, new ViewFactory<FlashUtilityView>()},
     {nullptr, "Wipe SD card", UTILITIES, Color::red(), &bitmap_icon_tools_wipesd, new ViewFactory<WipeSDView>()},
-    
+    {"imsi", "IMSI", RX, Color::red(), &bitmap_icon_remote, new ViewFactory<IMSIAppView>()},
 };
 
 const NavigationView::AppMap NavigationView::appMap = generate_app_map(NavigationView::appList);
