@@ -8,10 +8,10 @@
 
 namespace ui
 {
-    class IMSIAppView : public View
+    class IMSIView : public View
     {
     public:
-        IMSIAppView(NavigationView& nav);
+        IMSIView(NavigationView& nav);
         std::string title() const override { return "IMSI APP"; };
 
         void focus() override;

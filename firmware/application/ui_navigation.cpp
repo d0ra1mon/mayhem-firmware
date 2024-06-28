@@ -207,7 +207,7 @@ const NavigationView::AppList NavigationView::appList = {
     // Dangerous apps.
     {nullptr, "Flash Utility", UTILITIES, Color::red(), &bitmap_icon_temperature, new ViewFactory<FlashUtilityView>()},
     {nullptr, "Wipe SD card", UTILITIES, Color::red(), &bitmap_icon_tools_wipesd, new ViewFactory<WipeSDView>()},
-    {"imsi", "IMSI", RX, Color::red(), &bitmap_icon_remote, new ViewFactory<IMSIAppView>()},
+    {"imsi", "IMSI", RX, Color::red(), &bitmap_icon_remote, new ViewFactory<IMSIView>()},
 };
 
 const NavigationView::AppMap NavigationView::appMap = generate_app_map(NavigationView::appList);
