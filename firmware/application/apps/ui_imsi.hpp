@@ -15,7 +15,13 @@ namespace ui
         std::string title() const override { return "IMSI APP"; };
 
     private:
-        void update();
+        void update();                                            // Function declaration
+        MessageHandlerRegistration message_handler_update{        // Example, not required: MessageHandlerRegistration class
+            Message::ID::DisplayFrameSync,                        // relays messages to your app code from baseband. Every time you 
+            [this](const Message *const) {                        // get a  DisplayFrameSync message the update() function will
+                this->update();                                   // be triggered.  
+            }};
+            
         NavigationView& nav_;
     };
 

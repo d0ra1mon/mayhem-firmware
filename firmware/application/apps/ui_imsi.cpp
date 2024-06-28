@@ -17,5 +17,9 @@ namespace ui
     {
         add_child(&button_widget);
     }
-}
 
+    void IMSIAppView::update()                   // Every time you get a DisplayFrameSync message this function will be ran
+    {
+         // Message code
+    }
+}
